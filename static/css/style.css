@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    background-image: url(../img/barber.png);
+    background-repeat: no-repeat;
+    background-position: right;
+
+}
+
+.nav-link {
+    color: grey;
+}

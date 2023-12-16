@@ -1,0 +1,11 @@
+{% extends 'main_temp/base.html' %}
+{% block title %}{% endblock title %}
+{% block content %}
+<section>
+    <div>
+        {% for service in object_list %}
+            {{ service.service_duration }}
+        {% endfor %}
+    </div>
+</section>
+{% endblock content %}
