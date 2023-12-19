@@ -14,3 +14,13 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'damaskin_studio.settings')
 
 application = get_wsgi_application()
+
+
+def square_digits(num):
+    total = []
+    for i in list(str(num)):
+        total.append(int(i)**2)
+    return ''.join(total)
+
+
+print(square_digits(9119))
