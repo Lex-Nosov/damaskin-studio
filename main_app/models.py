@@ -39,7 +39,7 @@ class Services(models.Model):
     def __str__(self):
         return self.service_name
 
-
-class Review(models.Model):
-    person = models.ForeignKey(Clients, related_name='client', on_delete=models.CASCADE)
-    description = models.TextField(max_length=1000)
+#
+# class Review(models.Model):
+#     person = models.ForeignKey(Clients, related_name='client', on_delete=models.CASCADE)
+#     description = models.TextField(max_length=1000)
