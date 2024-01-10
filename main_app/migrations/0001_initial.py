@@ -38,8 +38,8 @@ class Migration(migrations.Migration):
                 ('service_description', models.TextField(max_length=500)),
                 ('service_cost', models.PositiveIntegerField()),
                 ('service_duration', models.PositiveIntegerField()),
-                ('client', models.ManyToManyField(to='main_temp.clients')),
-                ('master', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='master', to='main_temp.master')),
+                ('client', models.ManyToManyField(to='main_app.clients')),
+                ('master', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='master', to='main_app.master')),
             ],
         ),
         migrations.CreateModel(
@@ -47,8 +47,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('datetime', models.DateTimeField()),
-                ('client', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='main_temp.clients')),
-                ('service', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='main_temp.services')),
+                ('client', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='main_app.clients')),
+                ('service', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='main_app.services')),
             ],
         ),
     ]
