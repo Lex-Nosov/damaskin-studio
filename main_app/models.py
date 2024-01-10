@@ -18,7 +18,7 @@ class Clients(models.Model):
     master = models.ForeignKey(Master, related_name='master', on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
-        return f'{self.client_first_name}+' '+{self.client_second_name}'
+        return f"{self.client_first_name}+' '+{self.client_second_name}"
 
 
 class Sessions(models.Model):
