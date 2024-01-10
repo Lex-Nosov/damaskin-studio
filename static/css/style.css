@@ -23,7 +23,7 @@
 7.  Tetimonial Section
 8.  Member Section
 9.  Contact
-10.  Footer Style
+10. Footer Style
 11. Appointment Section
 
 -------------------------------------------------------------------*/
@@ -166,6 +166,16 @@ ol {
 
 /* buttons */
 
+.missing-btn {
+    cursor: default;
+	font-size: 16px;
+	background: #191919;
+	color: #191919;
+	display: inline-block;
+	font-weight: 700;
+	padding: 12px 30px 10px;
+}
+
 .primary-btn {
 	font-size: 16px;
 	color: #ffffff;
@@ -173,6 +183,11 @@ ol {
 	display: inline-block;
 	font-weight: 700;
 	padding: 12px 30px 10px;
+}
+
+.calendar-btn {
+    height: 50px;
+    width: 60px;
 }
 
 .site-btn {

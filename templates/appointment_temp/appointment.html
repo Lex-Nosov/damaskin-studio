@@ -11,24 +11,33 @@
 <body>
     <div class="appointment">
         {% for name_month, days in data.items %}
-        <div class="row">
-            <div>
-                {{ name_month }}
+            <div class="col">
+                <div>
+                    {{ name_month }}
+                </div>
+                <table>
+                    <tr>
+                        {% for name in name_days %}
+                            <th>
+                                {{ name }}
+                            </th>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <th>
+                        {% for day in days %}
+                            {% for value in day %}
+                                {% if value > 0 %}
+                                    <button type="button" class="primary-btn calendar-btn">{{ value }}</button>
+                                {% else %}
+                                    <button type="button" class="missing-btn calendar-btn">{{ value }}</button>
+                                {% endif %}
+                            {% endfor %}<br>
+                        {% endfor %}
+                        </th>
+                    </tr>
+                </table>
             </div>
-            <div>
-                {% for name in name_days %}
-                    {{ name }}
-                {% endfor %}
-            </div>
-            <div>
-                {% for day in days %}
-                    {% for value in day %}
-                        <button type="button" class="btn primary-btn">{{ value }}</button>
-                    {% endfor %}
-                {% endfor %}
-            </div>
-        </div>
         {% endfor %}
     </div>
 </body>
-</html>
